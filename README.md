@@ -41,12 +41,12 @@ Priva absolute fashion is a cross-platform mobile application developed using Fl
         Push Notifications: Firebase Cloud Messaging (FCM)
         Version Control: Git (GitHub)
 ## EDUCATION
-|||
+| Year | Education |
 |--|--|
 | April 2004 | Master of Computer Application from Manonmaniam Sundaranar University, Tirunelveli, Tamil Nadu, India |
 | May 2001 | Bachelor of Computer Science from Kerala University, Thiruvananthapuram, Kerala, India |
 ## CERTIFICATION
-|||
+| Year | Certification |
 |--|--|
 | May 2020 | Introduction to Flutter development using Dart |
 | May 2024 | The complete Flutter development bootcamp with Dart |
