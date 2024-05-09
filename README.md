@@ -1,16 +1,21 @@
-# my_resume
+# Dorothy Ashokan Sukeshini
 
-A new Flutter project.
+A Flutter project developed to show my resume.
 
-## Getting Started
+Email: dorothyashokansukeshini@gmail.com
 
-This project is a starting point for a Flutter application.
+LinkedIn: https://www.linkedin.com/in/dorothy-ashokan-sukeshini-30b0a6289
 
-A few resources to get you started if this is your first Flutter project:
+## SUMMARY
+Motivated and dedicated Flutter developer with a passion for mobile application development. Proficient in Dart programming language and experienced in building user friendly and responsive applications. Eager to contribute to innovative projects and continue learning and growing in the field of mobile development.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## SKILL SETS
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Framework | Flutter, Android |
+| Languages | Dart, JavaScript |
+| Web | HTML, CSS |
+| Database | MySQL |
+| Version Management | Git |
+| IDE | Visual Studio Code, Android Studio |
+
+

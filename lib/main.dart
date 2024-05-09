@@ -1,5 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:my_resume/padded_column.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -57,16 +60,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
               displayDividerRow(),
-              const Row(
+               Row(
                 children: [
-                  Text("Email: dorothyashokansukeshini@gmail.com"),
+                  createCaptionAndLink("Email", "dorothyashokansukeshini@gmail.com", "mailto:dorothyashokansukeshini@gmail.com"),
                 ],
               ),
-              const Row(
+             Row(
                 children: [
-                  Text(
-                      "LinkedIn: https://www.linkedin.com/in/dorothy-ashokan-sukeshini-30b0a6289"),
+                  createCaptionAndLink("LinkedIn", "https://www.linkedin.com/in/dorothy-ashokan-sukeshini-30b0a6289", "https://www.linkedin.com/in/dorothy-ashokan-sukeshini-30b0a6289"),
                 ],
+              ),
+               Row(
+                children: [
+                  createCaptionAndLink("GitHub", "https://github.com/sreekuttyshyam", "https://github.com/sreekuttyshyam")
+                ]
               ),
               sizedBox(20),
               const Row(
@@ -82,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Expanded(
                     child: Text(
-                      "Motivated and dedicated entry-level Flutter developer with a passion for mobile application development. Proficient in Dart programming language and experienced in building user friendly and responsive applications. Eager to contribute to innovative projects and continue learning and growing in the field of mobile development.",
+                      "Motivated and dedicated Flutter developer with a passion for mobile application development. Proficient in Dart programming language and experienced in building user friendly and responsive applications. Eager to contribute to innovative projects and continue learning and growing in the field of mobile development.",
                       overflow: TextOverflow.clip,
                     ),
                   ),
@@ -164,7 +171,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     projectDetailsRow(
                         '4. Shopping Cart: Users can add and remove items from their shopping cart, review their selections, and proceed to checkout with ease.'),
                     projectDetailsRow(
-                        '5. Checkout Process: The checkout process is streamlined, offering multiple payment options such as credit/debit card, PayPal, and others, ensuring a seamless and secure transaction experience.'),
+                        '5. Checkout Process: The checkout process is streamlined, offering multiple payment options such as Apple Pay/Google Pay and others, ensuring a seamless and secure transaction experience.'),
                     projectDetailsRow(
                         '6. Order History: Users have access to their order history, allowing them to track the status of their orders and view details of past purchases.'),
                     projectDetailsRow(
@@ -265,16 +272,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               Row(
                 children: [
-                  RichText(
-                      text: const TextSpan(
-                          style: TextStyle(fontStyle: FontStyle.italic),
-                          children: [
-                        TextSpan(text: 'The source code is available in'),
-                        TextSpan(
-                            text: ' GitHub',
-                            style: TextStyle(fontWeight: FontWeight.w600)),
-                        TextSpan(text: '.'),
-                      ]))
+                 createCaptionAndLink('The source code is available in', ' GitHub', "https://github.com/sreekuttyshyam/MY_RESUME", isItalics: true),
                 ],
               ),
             ],
@@ -320,6 +318,25 @@ class _MyHomePageState extends State<MyHomePage> {
         name: right,
       ),
     ]);
+  }
+  
+  createCaptionAndLink(String caption, String text, String url, {isItalics = false}) {
+    return RichText(text: TextSpan(children: [
+      TextSpan(text: "$caption: "),
+      TextSpan(text: text, style: const TextStyle(color: Colors.blue), 
+      recognizer: TapGestureRecognizer()..onTap = () async {
+      final Uri toLaunch = Uri.parse(url);
+
+      if(await canLaunchUrl(toLaunch)){
+        await launchUrl(
+          toLaunch,
+          mode: LaunchMode.externalApplication,
+          //webOnlyWindowName: "_blank"
+        );
+      }
+    }),
+    ], style: isItalics ? const TextStyle(fontStyle: FontStyle.italic) : const TextStyle()
+    ),);
   }
 }
 
