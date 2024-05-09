@@ -10,7 +10,7 @@ LinkedIn: https://www.linkedin.com/in/dorothy-ashokan-sukeshini-30b0a6289
 Motivated and dedicated Flutter developer with a passion for mobile application development. Proficient in Dart programming language and experienced in building user friendly and responsive applications. Eager to contribute to innovative projects and continue learning and growing in the field of mobile development.
 
 ## SKILL SETS
-|  |  |
+|||
 |------|-----|
 | Framework | Flutter, Android |
 | Languages | Dart, JavaScript |
@@ -41,12 +41,12 @@ Priva absolute fashion is a cross-platform mobile application developed using Fl
         Push Notifications: Firebase Cloud Messaging (FCM)
         Version Control: Git (GitHub)
 ## EDUCATION
-|  |  |
+|||
 |--|--|
 | April 2004 | Master of Computer Application from Manonmaniam Sundaranar University, Tirunelveli, Tamil Nadu, India |
 | May 2001 | Bachelor of Computer Science from Kerala University, Thiruvananthapuram, Kerala, India |
 ## CERTIFICATION
-|  |  |
+|||
 |--|--|
 | May 2020 | Introduction to Flutter development using Dart |
 | May 2024 | The complete Flutter development bootcamp with Dart |
